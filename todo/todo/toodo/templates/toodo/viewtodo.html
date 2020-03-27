@@ -1,0 +1,43 @@
+{% extends 'toodo/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1><b> {{ todos.title }} </b></h1>
+   {{ error }}
+    {% if todos.datecompleted %}
+    <div class="container">
+        <form>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="button" class="btn btn-warning" onclick="$('#uncomplete').click()">unComplete</button>
+            <button type="button" class="btn btn-danger" onclick="$('#delete').click()">Delete</button>
+        </form>
+        <form style='display: none;' method="POST" action="{% url 'uncomplete' todos.id%}">
+            {% csrf_token %}
+            <button type="submit" id="uncomplete">UnCompleted</button>
+        </form>
+        <form style='display: none;' method="POST" action="{% url 'delete' todos.id%}">
+            {% csrf_token %}
+            <button type="submit" id="delete">Delete</button>
+        </form>
+    </div>
+   
+   {% else %}
+   <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-warning">Update</button>
+            <button type="button" class="btn btn-success" onclick="$('#complete').click()">Complete</button>
+            <button type="button" class="btn btn-danger" onclick="$('#delete').click()">Delete</button>
+        </form>
+        <form style='display: none;' method="POST" action="{% url 'complete' todos.id%}">
+            {% csrf_token %}
+            <button type="submit" id="complete">Complete</button>
+        </form>
+        <form style='display: none;' method="POST" action="{% url 'delete' todos.id%}">
+            {% csrf_token %}
+            <button type="submit" id="delete">Delete</button>
+        </form>
+    </div>
+    {% endif %}
+{% endblock content %}}
