@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-7 text-center">
+
+           <h1>Welcome</h1>
+      <p>Life is a Test<br>So are you ready to take one</p>
+      {% if user.is_authenticated %}
+  <a role="button" class="btn btn-primary btn-lg" href="{% url 'testlist' %}">Take a Test</a>
+  {% else %}
+  <a role="button" class="btn btn-primary btn-lg" href="{% url 'loginuser' %}">Login</a>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}

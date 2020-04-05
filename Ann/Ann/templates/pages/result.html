@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+    {% if results %}
+        <div class="list-group">
+            {% for r in results %}
+            {% if r.grade == "F"%}
+                <a href="{% url 'resultsview' r.id %}" class="list-group-item list-group-item-action list-group-item-danger ">Name: {{r.test_name}}</a>
+            {%else%}
+                <a href="{% url 'resultsview' r.id %}" class="list-group-item list-group-item-action list-group-item-success ">Name: {{r.test_name}}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center">
+            <h2>Looks like you havent taken a test yet.</h2>
+        <br>
+        <a role="button" class="btn btn-primary" href="{% url 'testlist' %}">Take a Test</a>
+        </div>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

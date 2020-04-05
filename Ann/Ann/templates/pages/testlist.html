@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+    {% if tests %}
+    <h3>Available Tests</h3>
+        <div class="list-group">
+            {% for test in tests %}
+                <a href="{% url 'viewtest' test.id %}" class="list-group-item list-group-item-action"><b>Name: {{test.name}} (correct:{{test.marks}} questions) topic:{{test.topic}}</a>
+                
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center">
+            <h2>Looks like you don't have any Tets.</h2>
+        <br></div>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}

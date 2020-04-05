@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    {% if result.user == user %}
+    Hi {{user}} your Results are:<br>
+    Marks: {{result.marks}}/{{result.totalmarks}}<br>
+    test: {{result.test_name}}<br>
+    Grade: {{result.grade}}<br>
+    {% endif %}
+</div>
+{% endblock %}

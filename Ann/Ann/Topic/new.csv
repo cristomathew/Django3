@@ -1,0 +1,11 @@
+id,title,question,option1,option2,option3,option4,difficulty,topic_id,correct,marks
+1,1/sin² xcos² x,integral 1/sin² xcos² x,sin² x – cos² x + C,tan x + cot x + C,tan x – cot x + C,-1,average,1,tan x – cot x + C,4
+2,∫cot²x dx,∫cot²x dx equals to,cot x – x + C,cot x + x + C,-cot x – x + C,-cot x + x + C,average,1,-cot x – x + C,4
+3,∫ sec²(7 – 4x)dx,"If ∫ sec²(7 – 4x)dx = a tan (7 – 4x) + C, then value of a is",7,-4,3,-1/4,average,1,-1/4,4
+4,∫ sec² (7 – x)dx,Find ∫ sec² (7 – x)dx,-tan(7+x) + C,-tan(7-x) + C,tan(7-x) + C,tan(7+x) + C,easy,1,-tan(7-x) + C,2
+5,∫ |(1 – x)| dx,∫ |(1 – x)| dx is equal to (limit from -1 to 1),1,2,3,none,average,1,2,4
+6,∫ sin3x cos²x dx,The value of ∫ sin3x cos²x dx is ________(from −𝜋 to 𝜋),0,3,𝜋/2 -1,𝜋,average,1,0,4
+7,∫[2x]dx(from 0 to 1),Evaluate ∫[2x]dx (from 0 to 1),1,1/2,2,3/2,hard,1,1/2,6
+8,∫ x(1 – x)^89,Evaluate ∫ x(1 – x)^89dx (from 0 to 1),0,1,1/8190,1/9180,average,1,1/8190,4
+9,Evaluate ∫ |cos x|dx,Evaluate ∫ |cos x|dx from(0 to 𝜋),1,2,𝜋/2,𝜋,hard,1,2,6
+10,∫𝑒^(1/2*logx)dx,Evaluate ∫𝑒^(1/2*log𝑥)𝑑𝑥.,2x,2√𝑥,√𝑥,x,hard,1,2√𝑥,6
